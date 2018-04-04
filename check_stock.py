@@ -43,6 +43,7 @@ def send_email(msg_body):
     s.sendmail(sender, [recip], msg.as_string())
     s.quit()
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -60,4 +61,3 @@ if __name__ == '__main__':
     if price < args.threshold:
         msg = "\nALERT: current {} price is {}".format(stock, price)
         send_email(msg)
-
